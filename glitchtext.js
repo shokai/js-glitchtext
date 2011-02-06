@@ -1,4 +1,3 @@
-
 var GlitchText = function(){
     this.random = function(str){
         var ms = this.methods();
@@ -36,6 +35,20 @@ var GlitchText = function(){
         for(i in ss){
             var c = ss[i];
             if(!(c.match(/[ 　\t]/))) res += c+c
+        };
+        return res;
+    };
+
+    this.glitch_ignoreSearch = function(str){
+        return str.split('').join('/');
+    };
+
+    this.glitch_insertWave = function(str){
+        var res = '';
+        var ss = str.split('');
+        for(i in ss){
+            res += ss[i];
+            if(Math.random() > 0.8) res += '〜';
         };
         return res;
     };
