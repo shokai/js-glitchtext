@@ -7133,11 +7133,25 @@ GlitchText.prototype.glitch_kaibu = function(str){
     rev.shift();
     return str + rev.join('');
 };
+GlitchText.prototype.glitch_kirakira = function(str){
+    var arr = "☆ .。.:* .。.:*･ﾟ∞∮+'∮+'★*｡.::･'ﾟ｡.::･'ﾟ｡.:*:･'ﾟ".split('');
+    var last;
+    var kira = '';
+    while(true){
+        c = arr[Math.floor(Math.random()*arr.length)];
+        if(c != last){
+            kira += c;
+            last = c;
+            if(kira.length > 8 && Math.random() < 0.1) break;
+        };
+    };
+    return kira + str + kira.split('').reverse().join('');
+};
 GlitchText.prototype.glitch_linePrefix = function(str){
     var res = '───';
     while(true){
         res += '─';
-        if(Math.random() > 0.8) break;
+        if(Math.random() > 0.5) break;
     };
     return res+str;
 };
