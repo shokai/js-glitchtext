@@ -7133,6 +7133,14 @@ GlitchText.prototype.glitch_kaibu = function(str){
     rev.shift();
     return str + rev.join('');
 };
+GlitchText.prototype.glitch_linePrefix = function(str){
+    var res = '───';
+    while(true){
+        res += '─';
+        if(Math.random() > 0.8) break;
+    };
+    return res+str;
+};
 GlitchText.prototype.glitch_reverse = function(str){
     return str.split('').reverse().join('');
 };
