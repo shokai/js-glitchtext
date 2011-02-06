@@ -1,0 +1,24 @@
+!!! XML
+%html
+  %head
+    - @title = 'glitchtext.js sample'
+    %title= @title
+    %script{:type => 'text/javascript', :src => "./jquery.js"}
+    %script{:type => 'text/javascript', :src => "../glitchtext.js"}
+    %script{:type => 'text/javascript', :src => "./main.js"}
+  %body
+    %h1= @title
+    %div
+      %h2 source
+      %textarea{:id => 'source', :rows => 5, :cols => 100}
+        ここにテキストを入れるとglitchされます
+    %div#buttons
+      %input{:id => 'glitch', :type => 'button', :value => 'glitch'}
+    %div
+      %h2 result
+      %div#result
+    %div
+      %input{:id => 'tweet', :type => 'button', :value => 'tweet'}
+    %div
+      %h2 log
+      %div#log
