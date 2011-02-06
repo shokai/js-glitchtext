@@ -15,4 +15,10 @@ test
 ----
 
     % brew install v8
-    % v8 test.js
+    % rake test
+
+
+build
+-----
+
+    % rake build
