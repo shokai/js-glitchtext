@@ -7158,3 +7158,13 @@ GlitchText.prototype.glitch_linePrefix = function(str){
 GlitchText.prototype.glitch_reverse = function(str){
     return str.split('').reverse().join('');
 };
+GlitchText.prototype.glitch_speak = function(str){
+    var speaks = [
+        ['「','」'],
+        ['『','』'],
+        ['(',')'],
+        ['（','）']
+    ];
+    var sp = speaks[Math.floor(Math.random()*speaks.length)];
+    return sp[0]+str+sp[1];
+};
