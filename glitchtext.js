@@ -1,5 +1,5 @@
 
-var Glitch = function(){
+var GlitchText = function(){
     this.random = function(str){
         var ms = this.methods();
         var m = ms[Math.floor(Math.random()*ms.length)];

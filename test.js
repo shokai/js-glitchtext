@@ -1,6 +1,6 @@
 load('glitchtext.js');
 
-g = new Glitch();
+g = new GlitchText();
 
 s = "今日はかずすけ楽しかったねーまた遊ぼうねー今度はお弁当持って行こう"
 print("source : "+s);
