@@ -1,6 +1,6 @@
 @glitchtext_js = File.dirname(__FILE__)+'/src/glitchtext.js'
 @test_js = File.dirname(__FILE__)+'/test/test.js'
-@plugins = Dir.glob(File.dirname(__FILE__)+'/src/*.js').delete_if{|f| !(f =~ /glitch_.+.js$/)}
+@plugins = Dir.glob(File.dirname(__FILE__)+'/src/plugins/*.js')
 
 desc 'test all plugins'
 task 'test' do

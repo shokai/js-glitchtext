@@ -14,11 +14,15 @@ use
 test
 ----
 
+test all plugins
+
     % brew install v8
     % rake test
 
 
 build
 -----
+
+build glitchtext.js
 
     % rake build
