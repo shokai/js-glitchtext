@@ -36,15 +36,28 @@ test all plugins
 
 result
 
-    source : 今日はかずすけ楽しかったねー また遊ぼうねー 今度はお弁当持って行こう
-    glitch_addspace : 今 日 は か ず す け 楽 し か っ た ね ー   ま た 遊 ぼ う ね ー   今 度 は お 弁 当 持 っ て 行 こ う
-    glitch_atai : ＼今日はかずすけ楽しかったねー また遊ぼうねー 今度はお弁当持って行こう／
-    glitch_double : 今日はかずすけ楽しかったねー また遊ぼうねー 今度はお弁当持って行こう 今日はかずすけ楽しかったねー また遊ぼうねー 今度はお弁当持って行こう
-    glitch_doubleChar : 今今日日ははかかずずすすけけ楽楽ししかかっったたねねーーままたた遊遊ぼぼううねねーー今今度度ははおお弁弁当当持持っってて行行ここうう
-    glitch_ignoreSearch : 今/日/は/か/ず/す/け/楽/し/か/っ/た/ね/ー/ /ま/た/遊/ぼ/う/ね/ー/ /今/度/は/お/弁/当/持/っ/て/行/ こ/う
-    glitch_insertWave : 今日はかずすけ〜楽しかったねー ま〜た遊〜ぼう〜ねー 今度はお弁当持って行こう
-    glitch_kaibu : 今日はかずすけ楽しかったねー また遊ぼうねー 今度はお弁当持って行こうこ行てっ持当弁おは度今 ーねうぼ遊たま ーねたっかし楽けすずかは日今
-    glitch_reverse : うこ行てっ持当弁おは度今 ーねうぼ遊たま ーねたっかし楽けすずかは日今
+    source : ここにソース置いた https://github.com/shokai/js-glitchtext
+    glitch_addspace : こ こ に ソ ー ス 置 い た   h t t p s : / / g i t h u b . c o m / s h o k a i / j s - g l i t c h t e x t
+    glitch_atai : ＼ここにソース置いた https://github.com/shokai/js-glitchtext／
+    glitch_cmabridge : ここにーソスい置た htpts://github.com/shokai/js-giltchtext
+    glitch_double : ここにソース置いた https://github.com/shokai/js-glitchtext ここにソース置いた https://github.com/shokai/js-glitchtext
+    glitch_doubleChar : ここここににソソーースス置置いいたた hhttttppss::////ggiitthhuubb..ccoomm//sshhookkaaii//jjss--gglliittcchhtteexxtt
+    glitch_dullness : ごごにゾーズ置いだ https://github.com/shokai/js-glitchtext
+    glitch_face : ここにソース置いた https://github.com/shokai/js-glitchtext ｫヵｪﾘ☆彡..._〆(｀･∀･´o) 
+    glitch_fill140 : ここにソース置いた https://github.com/shokai/js-glitchtextここにソース置いた https://github.com/shokai/js-glitchtextここにソース置いた https://github.com/shokai/js-glitchtext
+    glitch_hiragana : ここにそーす置いた https://github.com/shokai/js-glitchtext
+    glitch_hirakata : ココニそーす置イタ https://github.com/shokai/js-glitchtext
+    glitch_ignoreSearch : こ/こ/に/ソ/ー/ス/置/い/た/ /h/t/t/p/s/://///g/i/t/h/u/b/./c/o/m///s/h/o/k/a/i///j/s/-/g/l/i/t/c/h/t/e/x/t
+    glitch_insertWave : こ〜こに〜ソー〜ス置〜いた h〜ttp〜s://g〜ithu〜b〜.com/shok〜a〜i/j〜s-g〜litch〜text
+    glitch_kaibu : ここにソース置いた https://github.com/shokai/js-glitchtextxethctilg-sj/iakohs/moc.buhtig//:sptth たい置スーソにここ
+    glitch_katakana : ココニソース置イタ https://github.com/shokai/js-glitchtext
+    glitch_kirakira : .'｡:｡'★｡.:ﾟ｡*:*ﾟ*'ここにソース置いた https://github.com/shokai/js-glitchtext'*ﾟ*:*｡ﾟ:.｡★'｡:｡'.
+    glitch_linePrefix : ────ここにソース置いた https://github.com/shokai/js-glitchtext
+    glitch_reverse : txethctilg-sj/iakohs/moc.buhtig//:sptth たい置スーソにここ
+    glitch_sekine : ここにショーシュ置いた https://github.com/shokai/js-glitchtext
+    glitch_speak : （ここにソース置いた https://github.com/shokai/js-glitchtext）
+    glitch_updown : ここにソー↓ス↑置いた ↓h↑t↓tps://g↑i↓t↑hub.com/shoka↓i↑/↓j↑s-gli↓tch↑t↓e↑xt
+    glitch_vertical_reverse : ここにソース置いた ɥʇʇds://bıʇɥnb.ɔoɯ/sɥoʞɐı/ظs-b1ıʇɔɥʇǝxʇ
 
 
 build
