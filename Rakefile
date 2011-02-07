@@ -7,7 +7,7 @@ desc 'test all plugins'
 task 'test' do
   puts cmd = "v8 #{@libs} #{@glitchtext_js} #{@plugins.join(' ')} #{@test_js}"
   puts '-'*5
-  system(cmd);
+  system cmd
 end
 
 desc 'build glitchtext.js'
@@ -26,7 +26,9 @@ task 'build' do
     }
     puts " => #{dist}\t#{File.size(dist)}(byte)"
   }
-
+  min = dist.gsub(/\.js/,'_min.js')
+  system "jsmin < #{dist} > #{min}"
+  puts " => #{min}\t#{File.size(min)}(byte)"
 end
 
 task :default => :test

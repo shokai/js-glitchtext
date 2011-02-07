@@ -52,6 +52,7 @@ build
 
 build glitchtext.js
 
+    % brew install jsmin
     % rake build
 
 
