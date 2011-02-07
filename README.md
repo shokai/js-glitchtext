@@ -18,6 +18,7 @@ load js
     <script src="tiny_segmenter-0.1.js" type="text/javascript" />
     <script src="glitchtext.js" type="text/javascript" />
 
+
 use
 
     var g = new GlitchText();
