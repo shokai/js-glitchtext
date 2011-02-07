@@ -1,8 +1,12 @@
 g = new GlitchText();
 
-s = "今日はかずすけ楽しかったねー マタ遊ボウネー 今度はお弁当持って行こう"
-print("source : "+s);
+ss = ['今日はかずすけ楽しかったねー マタ遊ボウネー 今度はお弁当持って行こう',
+      'ここにソース置いた https://github.com/shokai/js-glitchtext']
 
-g.methods().each(function(m){
-    print(m+" : "+g[m](s));
+ss.each(function(s){
+    print("source : "+s);
+    
+    g.methods().each(function(m){
+        print(m+" : "+g[m](s));
+    });
 });
