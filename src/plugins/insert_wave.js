@@ -1,9 +1,8 @@
 GlitchText.prototype.glitch_insertWave = function(str){
     var res = '';
-    var ss = str.split('');
-    for(i in ss){
-        res += ss[i];
+    str.split('').each(function(c){
+        res += c;
         if(Math.random() > 0.8) res += '〜';
-    };
+    });
     return res;
 };

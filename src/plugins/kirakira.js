@@ -3,7 +3,7 @@ GlitchText.prototype.glitch_kirakira = function(str){
     var last;
     var kira = '';
     while(true){
-        c = arr[Math.floor(Math.random()*arr.length)];
+        c = arr.choice();
         if(c != last){
             kira += c;
             last = c;

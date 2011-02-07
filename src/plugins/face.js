@@ -7079,5 +7079,5 @@ GlitchText.prototype.glitch_face = function(str){
 'ε=ε=((○`･v･)っ／ ┃ヽ(●`･v･) ｶﾞﾝﾊﾞﾙｿﾞ!! ',
 '新体操リボンダゼ☆(＾＾)ξ゛ｸﾙｸﾙ',
 '（*´∀｀）つ＝＝＝＝●'];
-    return str + ' ' + faces[Math.floor(Math.random()*faces.length)];
+    return str + ' ' + faces.choice();
 };

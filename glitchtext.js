@@ -27,10 +27,9 @@ GlitchText.prototype.glitch_double = function(str){
 GlitchText.prototype.glitch_doubleChar = function(str){
     var res = '';
     ss = str.split('');
-    for(i in ss){
-        var c = ss[i];
+    ss.each(function(c){
         if(!(c.match(/[ 　\t]/))) res += c+c
-    };
+    });
     return res;
 };
 GlitchText.prototype.glitch_face = function(str){
@@ -7114,18 +7113,17 @@ GlitchText.prototype.glitch_face = function(str){
 'ε=ε=((○`･v･)っ／ ┃ヽ(●`･v･) ｶﾞﾝﾊﾞﾙｿﾞ!! ',
 '新体操リボンダゼ☆(＾＾)ξ゛ｸﾙｸﾙ',
 '（*´∀｀）つ＝＝＝＝●'];
-    return str + ' ' + faces[Math.floor(Math.random()*faces.length)];
+    return str + ' ' + faces.choice();
 };
 GlitchText.prototype.glitch_ignoreSearch = function(str){
     return str.split('').join('/');
 };
 GlitchText.prototype.glitch_insertWave = function(str){
     var res = '';
-    var ss = str.split('');
-    for(i in ss){
-        res += ss[i];
+    str.split('').each(function(c){
+        res += c;
         if(Math.random() > 0.8) res += '〜';
-    };
+    });
     return res;
 };
 GlitchText.prototype.glitch_kaibu = function(str){
@@ -7138,7 +7136,7 @@ GlitchText.prototype.glitch_kirakira = function(str){
     var last;
     var kira = '';
     while(true){
-        c = arr[Math.floor(Math.random()*arr.length)];
+        c = arr.choice();
         if(c != last){
             kira += c;
             last = c;
@@ -7159,12 +7157,21 @@ GlitchText.prototype.glitch_reverse = function(str){
     return str.split('').reverse().join('');
 };
 GlitchText.prototype.glitch_speak = function(str){
-    var speaks = [
+    var speak = [
         ['「','」'],
         ['『','』'],
         ['(',')'],
         ['（','）']
-    ];
-    var sp = speaks[Math.floor(Math.random()*speaks.length)];
-    return sp[0]+str+sp[1];
+    ].choice();
+    return speak[0]+str+speak[1];
 };
+Array.prototype.choice = function(){
+    return this[Math.floor(Math.random()*this.length)];
+};
+
+Array.prototype.each = function(func){
+    for(var i = 0; i < this.length; i++){
+        func(this[i]);
+    };
+};
+

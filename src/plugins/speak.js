@@ -1,10 +1,9 @@
 GlitchText.prototype.glitch_speak = function(str){
-    var speaks = [
+    var speak = [
         ['「','」'],
         ['『','』'],
         ['(',')'],
         ['（','）']
-    ];
-    var sp = speaks[Math.floor(Math.random()*speaks.length)];
-    return sp[0]+str+sp[1];
+    ].choice();
+    return speak[0]+str+speak[1];
 };
