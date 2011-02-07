@@ -1,8 +1,6 @@
 GlitchText.prototype.glitch_doubleChar = function(str){
-    var res = '';
-    ss = str.split('');
-    ss.each(function(c){
-        if(!(c.match(/[ 　\t]/))) res += c+c
-    });
-    return res;
+    return str.split('').map(function(i){
+        if(i.match(/[ 　\t]/)) return i;
+        return i+i;
+    }).join('');
 };

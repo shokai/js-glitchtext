@@ -7,3 +7,9 @@ Array.prototype.each = function(func){
         func(this[i]);
     };
 };
+
+Array.prototype.map = function(func){
+    var res = new Array();
+    this.each(function(i){res.push(func(i))});
+    return res;
+};
