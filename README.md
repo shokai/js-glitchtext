@@ -4,8 +4,17 @@ glitchtext.js
 glitch your text.
 
 
+dependencies
+============
+
+* [TinySegmenter](http://chasen.org/~taku/software/TinySegmenter/)
+
+
 use
 ===
+
+    <script src="tiny_segmenter-0.1.js" type="text/javascript" />
+    <script src="glitchtext.js" type="text/javascript" />
 
     var g = new GlitchText();
     var source = '今日はかずすけ楽しかったねー また遊ぼうねー 今度はお弁当持って行こう';
