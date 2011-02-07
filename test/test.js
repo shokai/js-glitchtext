@@ -1,6 +1,6 @@
 g = new GlitchText();
 
-s = "今日はかずすけ楽しかったねー また遊ぼうねー 今度はお弁当持って行こう"
+s = "今日はかずすけ楽しかったねー マタ遊ボウネー 今度はお弁当持って行こう"
 print("source : "+s);
 
 g.methods().each(function(m){
