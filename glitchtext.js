@@ -363,6 +363,22 @@ GlitchText.prototype.glitch_speak = function(str){
     ].choice();
     return speak[0]+str+speak[1];
 };
+GlitchText.prototype.glitch_updown = function(str){
+    var count = 0;
+    return str.split('').map(function(c){
+        if(Math.random() > 0.7){
+            count++;
+            if(count % 2 == 0){
+                return c+'↑';
+            }
+            else{
+                return c+'↓';
+            }
+        };
+        return c;
+    }).join('');
+};
+
 Array.prototype.choice = function(){
     return this[Math.floor(Math.random()*this.length)];
 };
