@@ -1,3 +1,6 @@
+// GlitchText.js
+// (c) 2011 Sho Hashimoto <hashimoto@shokai.org>
+// https://github.com/shokai/js-glitchtext
 
 var GlitchText=function(){this.random=function(str){var ms=this.methods();var m=ms[Math.floor(Math.random()*ms.length)];return this[m](str);};this.methods=function(){var ms=new Array();for(m in this){if(m.match(/^glitch_.+/))ms.push(m);};return ms;};};GlitchText.prototype.glitch_addspace=function(str){return str.split('').join(' ');};GlitchText.prototype.glitch_atai=function(str){return"＼"+str+"／";};try{if(typeof TinySegmenter=='function'){GlitchText.prototype.glitch_cmabridge=function(str){var tseg=new TinySegmenter();return tseg.segment(str).map(function(seg){seg=seg.split('');var i=Math.floor(Math.random()*(seg.length-1));var tmp=seg[i];seg[i]=seg[i+1];seg[i+1]=tmp;return seg.join('');}).join('');};}}
 catch(e){}

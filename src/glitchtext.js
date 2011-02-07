@@ -1,7 +1,3 @@
-// GlitchText.js
-// (c) 2011 Sho Hashimoto <hashimoto@shokai.org>
-// https://github.com/shokai/js-glitchtext
-
 var GlitchText = function(){
     this.random = function(str){
         var ms = this.methods();

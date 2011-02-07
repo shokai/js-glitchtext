@@ -12,22 +12,31 @@ end
 
 desc 'build glitchtext.js'
 task 'build' do
-  dist = File.dirname(__FILE__)+'/glitchtext.js'
-  open(dist,'w+'){|dest|
+copy = <<EOF
+// GlitchText.js
+// (c) 2011 Sho Hashimoto <hashimoto@shokai.org>
+// https://github.com/shokai/js-glitchtext
+EOF
+  dest = File.dirname(__FILE__)+'/glitchtext.js'
+  open(dest,'w+'){|out|
+    out.write copy+"\n"
     open(@glitchtext_js){|f|
-      dest.write f.readlines
-      dest.write "\n"
+      out.write f.readlines
+      out.write "\n"
     }
     @plugins.each{|i|
       open(i){|f|
-        dest.write f.readlines
-        dest.write "\n"
+        out.write f.readlines
+        out.write "\n"
       }
     }
-    puts " => #{dist}\t#{File.size(dist)}(byte)"
+    puts " => #{dest}\t#{File.size(dest)}(byte)"
   }
-  min = dist.gsub(/\.js/,'_min.js')
-  system "jsmin < #{dist} > #{min}"
+  min = dest.gsub(/\.js/,'_min.js')
+  open(min, 'w+'){|f|
+    f.write copy
+  }
+  system "jsmin < #{dest} >> #{min}"
   puts " => #{min}\t#{File.size(min)}(byte)"
 end
 
