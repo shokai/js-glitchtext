@@ -125,6 +125,16 @@ GlitchText.prototype.glitch_fill140 = function(str){
     return res;
 };
 
+GlitchText.prototype.glitch_aaiiuueeoo = function(str){
+    return str.split('').map(function(i){
+        if(i.match(/[aiueoあいうえおアイウエオ]/)){
+            var count = Math.random()*3;
+            for(var j = 0; j < count; j++) i += i;
+        }
+        return i
+    }).join('');
+};
+
 GlitchText.prototype.glitch_hiragana = function(str){
     var dic = {
         あ : 'ア',
@@ -375,7 +385,7 @@ GlitchText.prototype.glitch_shoooooookai = function(str){
     var arr = str.split('');
     for(var i = 0; i < arr.length-1; i++){
         if(arr[i] == arr[i+1]){
-            var count = Math.random()*5;
+            var count = Math.random()*3;
             for(var j = 0; j < count; j++) arr[i] += arr[i];
         };
     };
