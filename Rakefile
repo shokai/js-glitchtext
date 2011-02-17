@@ -32,12 +32,6 @@ EOF
     }
     puts " => #{dest}\t#{File.size(dest)}(byte)"
   }
-  min = dest.gsub(/\.js/,'_min.js')
-  open(min, 'w+'){|f|
-    f.write copy
-  }
-  system "jsmin < #{dest} >> #{min}"
-  puts " => #{min}\t#{File.size(min)}(byte)"
 end
 
 task :default => :test
