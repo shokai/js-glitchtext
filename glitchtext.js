@@ -455,6 +455,20 @@ GlitchText.prototype.glitch_speak = function(str){
     ].choice();
     return speak[0]+str+speak[1];
 };
+GlitchText.prototype.glitch_turai = function(str){
+    var reg = /([ 　\t\r\n]|https?\:[\w\.\~\-\/\?\&\+\=\:\@\%\;\#\%]+)/
+    var arr = str.split(reg);
+    var indexes = new Array();
+    for(var i = 0; i < arr.length; i++){
+        if(!arr[i].match(reg) && arr[i].length > 0) indexes.push(i);
+    };
+    if(indexes.length > 0){
+        var i = indexes.choice();
+        arr[i] = 'http://'+arr[i]+'.つらい.jp';
+    };
+    return arr.join('');
+};
+
 GlitchText.prototype.glitch_updown = function(str){
     var count = 0;
     return str.split('').map(function(c){
