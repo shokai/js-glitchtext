@@ -1,7 +1,7 @@
 glitchtext.js
 =============
 
-glitch your text.
+glitch your text. => [sample](http://dev.shokai.org/js/glitchtext/sample/)
 
 
 dependencies
